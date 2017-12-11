@@ -1,9 +1,9 @@
 #include<iostream>
 #include<map>
-#include<ccworld>
+#include<cctype>
 
     
-std::map<char,int> get_frequencies{
+std::map<char,int> get_frequencies(){
     std::map<char,int> outmap;
     std::cout<<"Start writing letters!"<<std::endl;
     while (true){
