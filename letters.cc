@@ -17,18 +17,16 @@ std::map<char,int> get_frequencies{
 }
 
 void print_frequencies(const std::map<char,int>& frequencies){
-    for (auto entry : outmap);
+    for (auto entry : frequencies){
         std::cout<<entry.first<<":";
         std::cout<<entry.second<<std::endl;
+    }
 }
 
-void letterfrequencies(const std::map<char,int) outmap = get_frequencies{
-    print_frequencies(get_frequencies)
-}
 
 int main(){
     
-    letterfrequencies();
+    print_frequencies(get_frequencies());
 
     return 0;
 }
