@@ -19,3 +19,23 @@ std::map<char,int> get_frequencies(){
     }
     return output;
 }
+
+void print_frequencies(const std::map<char, int>& frequencies){
+    int size = 0;
+    for (auto& e : frequencies){
+        size += e.second;
+    }
+    for (auto& e : frequencies){
+        std::cout << e.first << ": " << (double)e.second / (double)size << std::endl;
+    }
+    std::cout << "Total words: " << size;
+}
+
+std::map<std::string,int> get_frequencies();
+void print_frequencies(const std::map<std::string, int>&);
+
+int main{
+    print_frequencies(get_frequencies());
+
+    return 0;
+}
