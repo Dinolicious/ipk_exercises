@@ -4,7 +4,7 @@
 
     
 std::map<char,int> get_frequencies(){
-    std::map<char,int> outmap;
+    std::map<char,int> output;
     std::cout<<"Start writing letters!"<<std::endl;
     while (true){
         unsigned char c;                                                                    //read in character
@@ -12,9 +12,9 @@ std::map<char,int> get_frequencies(){
         if (!std::cin)                                                                      //abort if input closed
             break;
         if (isalpha(c))                                                                     //check if letter or sign
-            outmap[toupper(c)]++;
+            output[toupper(c)]++;
     }
-    return outmap;
+    return output;
 }
 
 void print_frequencies(const std::map<char, int>& frequencies){                             //giving number of signs
