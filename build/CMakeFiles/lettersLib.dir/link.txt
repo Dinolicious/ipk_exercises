@@ -1,0 +1,2 @@
+C:\PROGRA~1\TDM-GCC\bin\ar.exe qc liblettersLib.a  CMakeFiles/lettersLib.dir/letters.cc.obj
+C:\PROGRA~1\TDM-GCC\bin\ranlib.exe liblettersLib.a

@@ -1,0 +1,2 @@
+C:\PROGRA~1\TDM-GCC\bin\ar.exe qc libwordsLib.a  CMakeFiles/wordsLib.dir/words.cc.obj
+C:\PROGRA~1\TDM-GCC\bin\ranlib.exe libwordsLib.a
