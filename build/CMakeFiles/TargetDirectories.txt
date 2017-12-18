@@ -1,5 +1,0 @@
-C:/Users/Tim/Documents/Informatik/ipk_exercises/build/CMakeFiles/rebuild_cache.dir
-C:/Users/Tim/Documents/Informatik/ipk_exercises/build/CMakeFiles/sanitizewordLib.dir
-C:/Users/Tim/Documents/Informatik/ipk_exercises/build/CMakeFiles/words.dir
-C:/Users/Tim/Documents/Informatik/ipk_exercises/build/CMakeFiles/letters.dir
-C:/Users/Tim/Documents/Informatik/ipk_exercises/build/CMakeFiles/edit_cache.dir

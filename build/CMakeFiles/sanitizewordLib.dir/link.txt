@@ -1,2 +1,0 @@
-C:\PROGRA~1\TDM-GCC\bin\ar.exe qc libsanitizewordLib.a  CMakeFiles/sanitizewordLib.dir/sanitizeword.cc.obj
-C:\PROGRA~1\TDM-GCC\bin\ranlib.exe libsanitizewordLib.a
