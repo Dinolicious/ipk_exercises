@@ -2,7 +2,7 @@
 #include<map>
 #include<cctype>
 #include<string>
-#include"sanitizeword.hh"
+#include "sanitizeword.hh"
 
 std::map<std::string, int> get_frequencies(){
     std::map<std::string, int> output;

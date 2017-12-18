@@ -2,12 +2,12 @@
 #include<map>
 #include<cctype>
 
-    
+
 std::map<char,int> get_frequencies(){
     std::map<char,int> output;
     std::cout<<"Start writing letters!"<<std::endl;
     while (true){
-        unsigned char c;                                                                    //read in character
+        unsigned char c;                                                                    //read in char
         std::cin >> c;
         if (!std::cin)                                                                      //abort if input closed
             break;
