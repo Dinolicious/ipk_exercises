@@ -1,6 +1,9 @@
 #ifndef CANVAS_HH
 #define CANVAS_HH
 
+#include <vector>
+
+#include "point.hh"
 #include "pgm.hh"
 
 // example implementation that combines declaration
@@ -17,54 +20,86 @@
 // simple canvas class for image generation
 class Canvas
 {
-    // access to data without the need for accessors,
-    // const keyword prevents arbitrary change of state
-  public:
 
-    const Point center;
-    const double width;
-    const double height;
+  // member variables are private
+private:
 
-    // pixel values are protected and can only be
-    // changed using accessor functions
-  private:
+  const Point _center;
+  const double _width;
+  const double _height;
+  const int _horPixels;
+  const int _vertPixels;
+  std::vector<std::vector<int> > _pixels;
 
-    std::vector<std::vector<int> > pixels;
+  // Constructor and method definitions
+public:
 
-    // Constructor and method definitions
-  public:
-
-    Canvas(const Point& center_, double width_, double height_,
-        int horPixels_, int vertPixels_)
-      : center(center_), width(width_), height(height_),
-      pixels(horPixels,std::vector<int>(vertPixels))
+  Canvas(const Point& center, double width, double height,
+         int horPixels, int vertPixels)
+    : _center(center)
+    , _width(width)
+    , _height(height)
+    , _horPixels(horPixels)
+    , _vertPixels(vertPixels)
+    , _pixels(horPixels,std::vector<int>(vertPixels))
   {}
 
-    // returns coordinates of given pixel
-    Point coord(int i, int j) const
-    {
-      double x = (i - pixels   .size()/2.)*width/pixels    .size();
-      double y = (j - pixels[0].size()/2.)*height/pixels[0].size();
-      return {x + canvas.center.x, y + canvas.center.y};
-    }
+  // Accessors for member variables
 
-    // read-only access to pixel
-    int operator()(int i, int j) const
-    {
-      return pixels[i][j];
-    }
+  Point center() const
+  {
+    return _center;
+  }
 
-    // read/write access to pixel
-    int& operator()(int i, int j)
-    {
-      return pixels[i][j];
-    }
+  double width() const
+  {
+    return _width;
+  }
 
-    // create image file from canvas content
-    write(const std::string& filename) const
-    {
-      write_pgm(pixels,filename);
-    }
+  double height() const
+  {
+    return _height;
+  }
+
+  int horPixels() const
+  {
+    return _horPixels;
+  }
+
+  int vertPixels() const
+  {
+    return _vertPixels;
+  }
+
+  // returns coordinates of given pixel
+  Point coord(int i, int j) const
+  {
+    double x = (i - _horPixels/2.)*_width / _horPixels;
+    double y = (j - _vertPixels/2.)*_height / _vertPixels;
+    return {x + _center.x(), y + _center.y()};
+  }
+
+  // read-only access to pixel
+  // to use it with a variable called mycanvas,
+  // write mycanvas(i_coord,j_coord)
+  int operator()(int i, int j) const
+  {
+    return _pixels[i][j];
+  }
+
+  // read/write access to pixel
+  // to use it with a variable called mycanvas,
+  // write mycanvas(i_coord,j_coord) = value;
+  int& operator()(int i, int j)
+  {
+    return _pixels[i][j];
+  }
+
+  // create image file from canvas content
+  void write(const std::string& filename) const
+  {
+    write_pgm(_pixels,filename);
+  }
 };
 
 #endif //CANVAS_HH
