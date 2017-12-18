@@ -190,6 +190,9 @@ ipk07_SOURCE_DIR:STATIC=C:/Users/Tim/Documents/Informatik/ipk_exercises
 lettersLib_LIB_DEPENDS:STATIC=
 
 //Dependencies for target
+sanitizewordLib_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
 wordsLib_LIB_DEPENDS:STATIC=
 
 

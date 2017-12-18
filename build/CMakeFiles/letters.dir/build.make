@@ -89,7 +89,6 @@ letters_EXTERNAL_OBJECTS =
 
 letters.exe: CMakeFiles/letters.dir/letters.cc.obj
 letters.exe: CMakeFiles/letters.dir/build.make
-letters.exe: liblettersLib.a
 letters.exe: CMakeFiles/letters.dir/linklibs.rsp
 letters.exe: CMakeFiles/letters.dir/objects1.rsp
 letters.exe: CMakeFiles/letters.dir/link.txt

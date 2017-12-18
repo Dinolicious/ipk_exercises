@@ -55,17 +55,6 @@ CMAKE_BINARY_DIR = C:\Users\Tim\Documents\Informatik\ipk_exercises\build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	"C:\Program Files\CMake\bin\cmake-gui.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -76,6 +65,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	"C:\Program Files\CMake\bin\cmake-gui.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -110,30 +110,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named wordsLib
+# Target rules for targets named sanitizewordLib
 
 # Build rule for target.
-wordsLib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 wordsLib
-.PHONY : wordsLib
+sanitizewordLib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 sanitizewordLib
+.PHONY : sanitizewordLib
 
 # fast build rule for target.
-wordsLib/fast:
-	$(MAKE) -f CMakeFiles\wordsLib.dir\build.make CMakeFiles/wordsLib.dir/build
-.PHONY : wordsLib/fast
-
-#=============================================================================
-# Target rules for targets named lettersLib
-
-# Build rule for target.
-lettersLib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 lettersLib
-.PHONY : lettersLib
-
-# fast build rule for target.
-lettersLib/fast:
-	$(MAKE) -f CMakeFiles\lettersLib.dir\build.make CMakeFiles/lettersLib.dir/build
-.PHONY : lettersLib/fast
+sanitizewordLib/fast:
+	$(MAKE) -f CMakeFiles\sanitizewordLib.dir\build.make CMakeFiles/sanitizewordLib.dir/build
+.PHONY : sanitizewordLib/fast
 
 #=============================================================================
 # Target rules for targets named words
@@ -167,7 +154,6 @@ letters.obj: letters.cc.obj
 
 # target to build an object file
 letters.cc.obj:
-	$(MAKE) -f CMakeFiles\lettersLib.dir\build.make CMakeFiles/lettersLib.dir/letters.cc.obj
 	$(MAKE) -f CMakeFiles\letters.dir\build.make CMakeFiles/letters.dir/letters.cc.obj
 .PHONY : letters.cc.obj
 
@@ -177,7 +163,6 @@ letters.i: letters.cc.i
 
 # target to preprocess a source file
 letters.cc.i:
-	$(MAKE) -f CMakeFiles\lettersLib.dir\build.make CMakeFiles/lettersLib.dir/letters.cc.i
 	$(MAKE) -f CMakeFiles\letters.dir\build.make CMakeFiles/letters.dir/letters.cc.i
 .PHONY : letters.cc.i
 
@@ -187,9 +172,35 @@ letters.s: letters.cc.s
 
 # target to generate assembly for a file
 letters.cc.s:
-	$(MAKE) -f CMakeFiles\lettersLib.dir\build.make CMakeFiles/lettersLib.dir/letters.cc.s
 	$(MAKE) -f CMakeFiles\letters.dir\build.make CMakeFiles/letters.dir/letters.cc.s
 .PHONY : letters.cc.s
+
+sanitizeword.obj: sanitizeword.cc.obj
+
+.PHONY : sanitizeword.obj
+
+# target to build an object file
+sanitizeword.cc.obj:
+	$(MAKE) -f CMakeFiles\sanitizewordLib.dir\build.make CMakeFiles/sanitizewordLib.dir/sanitizeword.cc.obj
+.PHONY : sanitizeword.cc.obj
+
+sanitizeword.i: sanitizeword.cc.i
+
+.PHONY : sanitizeword.i
+
+# target to preprocess a source file
+sanitizeword.cc.i:
+	$(MAKE) -f CMakeFiles\sanitizewordLib.dir\build.make CMakeFiles/sanitizewordLib.dir/sanitizeword.cc.i
+.PHONY : sanitizeword.cc.i
+
+sanitizeword.s: sanitizeword.cc.s
+
+.PHONY : sanitizeword.s
+
+# target to generate assembly for a file
+sanitizeword.cc.s:
+	$(MAKE) -f CMakeFiles\sanitizewordLib.dir\build.make CMakeFiles/sanitizewordLib.dir/sanitizeword.cc.s
+.PHONY : sanitizeword.cc.s
 
 words.obj: words.cc.obj
 
@@ -197,7 +208,6 @@ words.obj: words.cc.obj
 
 # target to build an object file
 words.cc.obj:
-	$(MAKE) -f CMakeFiles\wordsLib.dir\build.make CMakeFiles/wordsLib.dir/words.cc.obj
 	$(MAKE) -f CMakeFiles\words.dir\build.make CMakeFiles/words.dir/words.cc.obj
 .PHONY : words.cc.obj
 
@@ -207,7 +217,6 @@ words.i: words.cc.i
 
 # target to preprocess a source file
 words.cc.i:
-	$(MAKE) -f CMakeFiles\wordsLib.dir\build.make CMakeFiles/wordsLib.dir/words.cc.i
 	$(MAKE) -f CMakeFiles\words.dir\build.make CMakeFiles/words.dir/words.cc.i
 .PHONY : words.cc.i
 
@@ -217,7 +226,6 @@ words.s: words.cc.s
 
 # target to generate assembly for a file
 words.cc.s:
-	$(MAKE) -f CMakeFiles\wordsLib.dir\build.make CMakeFiles/wordsLib.dir/words.cc.s
 	$(MAKE) -f CMakeFiles\words.dir\build.make CMakeFiles/words.dir/words.cc.s
 .PHONY : words.cc.s
 
@@ -227,15 +235,17 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... wordsLib
-	@echo ... lettersLib
+	@echo ... rebuild_cache
+	@echo ... sanitizewordLib
 	@echo ... words
 	@echo ... letters
 	@echo ... edit_cache
-	@echo ... rebuild_cache
 	@echo ... letters.obj
 	@echo ... letters.i
 	@echo ... letters.s
+	@echo ... sanitizeword.obj
+	@echo ... sanitizeword.i
+	@echo ... sanitizeword.s
 	@echo ... words.obj
 	@echo ... words.i
 	@echo ... words.s

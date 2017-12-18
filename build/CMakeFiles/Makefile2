@@ -59,76 +59,39 @@ CMAKE_SOURCE_DIR = C:\Users\Tim\Documents\Informatik\ipk_exercises
 CMAKE_BINARY_DIR = C:\Users\Tim\Documents\Informatik\ipk_exercises\build
 
 #=============================================================================
-# Target rules for target CMakeFiles/wordsLib.dir
+# Target rules for target CMakeFiles/sanitizewordLib.dir
 
 # All Build rule for target.
-CMakeFiles/wordsLib.dir/all:
-	$(MAKE) -f CMakeFiles\wordsLib.dir\build.make CMakeFiles/wordsLib.dir/depend
-	$(MAKE) -f CMakeFiles\wordsLib.dir\build.make CMakeFiles/wordsLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Tim\Documents\Informatik\ipk_exercises\build\CMakeFiles --progress-num=7,8 "Built target wordsLib"
-.PHONY : CMakeFiles/wordsLib.dir/all
+CMakeFiles/sanitizewordLib.dir/all:
+	$(MAKE) -f CMakeFiles\sanitizewordLib.dir\build.make CMakeFiles/sanitizewordLib.dir/depend
+	$(MAKE) -f CMakeFiles\sanitizewordLib.dir\build.make CMakeFiles/sanitizewordLib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Tim\Documents\Informatik\ipk_exercises\build\CMakeFiles --progress-num=3,4 "Built target sanitizewordLib"
+.PHONY : CMakeFiles/sanitizewordLib.dir/all
 
 # Include target in all.
-all: CMakeFiles/wordsLib.dir/all
+all: CMakeFiles/sanitizewordLib.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/wordsLib.dir/rule: cmake_check_build_system
+CMakeFiles/sanitizewordLib.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Tim\Documents\Informatik\ipk_exercises\build\CMakeFiles 2
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/wordsLib.dir/all
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/sanitizewordLib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Tim\Documents\Informatik\ipk_exercises\build\CMakeFiles 0
-.PHONY : CMakeFiles/wordsLib.dir/rule
+.PHONY : CMakeFiles/sanitizewordLib.dir/rule
 
 # Convenience name for target.
-wordsLib: CMakeFiles/wordsLib.dir/rule
+sanitizewordLib: CMakeFiles/sanitizewordLib.dir/rule
 
-.PHONY : wordsLib
-
-# clean rule for target.
-CMakeFiles/wordsLib.dir/clean:
-	$(MAKE) -f CMakeFiles\wordsLib.dir\build.make CMakeFiles/wordsLib.dir/clean
-.PHONY : CMakeFiles/wordsLib.dir/clean
+.PHONY : sanitizewordLib
 
 # clean rule for target.
-clean: CMakeFiles/wordsLib.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/lettersLib.dir
-
-# All Build rule for target.
-CMakeFiles/lettersLib.dir/all:
-	$(MAKE) -f CMakeFiles\lettersLib.dir\build.make CMakeFiles/lettersLib.dir/depend
-	$(MAKE) -f CMakeFiles\lettersLib.dir\build.make CMakeFiles/lettersLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Tim\Documents\Informatik\ipk_exercises\build\CMakeFiles --progress-num=3,4 "Built target lettersLib"
-.PHONY : CMakeFiles/lettersLib.dir/all
-
-# Include target in all.
-all: CMakeFiles/lettersLib.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/lettersLib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Tim\Documents\Informatik\ipk_exercises\build\CMakeFiles 2
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/lettersLib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Tim\Documents\Informatik\ipk_exercises\build\CMakeFiles 0
-.PHONY : CMakeFiles/lettersLib.dir/rule
-
-# Convenience name for target.
-lettersLib: CMakeFiles/lettersLib.dir/rule
-
-.PHONY : lettersLib
+CMakeFiles/sanitizewordLib.dir/clean:
+	$(MAKE) -f CMakeFiles\sanitizewordLib.dir\build.make CMakeFiles/sanitizewordLib.dir/clean
+.PHONY : CMakeFiles/sanitizewordLib.dir/clean
 
 # clean rule for target.
-CMakeFiles/lettersLib.dir/clean:
-	$(MAKE) -f CMakeFiles\lettersLib.dir\build.make CMakeFiles/lettersLib.dir/clean
-.PHONY : CMakeFiles/lettersLib.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/lettersLib.dir/clean
+clean: CMakeFiles/sanitizewordLib.dir/clean
 
 .PHONY : clean
 
@@ -136,7 +99,7 @@ clean: CMakeFiles/lettersLib.dir/clean
 # Target rules for target CMakeFiles/words.dir
 
 # All Build rule for target.
-CMakeFiles/words.dir/all: CMakeFiles/wordsLib.dir/all
+CMakeFiles/words.dir/all: CMakeFiles/sanitizewordLib.dir/all
 	$(MAKE) -f CMakeFiles\words.dir\build.make CMakeFiles/words.dir/depend
 	$(MAKE) -f CMakeFiles\words.dir\build.make CMakeFiles/words.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Tim\Documents\Informatik\ipk_exercises\build\CMakeFiles --progress-num=5,6 "Built target words"
@@ -173,7 +136,7 @@ clean: CMakeFiles/words.dir/clean
 # Target rules for target CMakeFiles/letters.dir
 
 # All Build rule for target.
-CMakeFiles/letters.dir/all: CMakeFiles/lettersLib.dir/all
+CMakeFiles/letters.dir/all:
 	$(MAKE) -f CMakeFiles\letters.dir\build.make CMakeFiles/letters.dir/depend
 	$(MAKE) -f CMakeFiles\letters.dir\build.make CMakeFiles/letters.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Tim\Documents\Informatik\ipk_exercises\build\CMakeFiles --progress-num=1,2 "Built target letters"
@@ -186,7 +149,7 @@ all: CMakeFiles/letters.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/letters.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Tim\Documents\Informatik\ipk_exercises\build\CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Tim\Documents\Informatik\ipk_exercises\build\CMakeFiles 2
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/letters.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Tim\Documents\Informatik\ipk_exercises\build\CMakeFiles 0
 .PHONY : CMakeFiles/letters.dir/rule

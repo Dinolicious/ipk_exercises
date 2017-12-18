@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Tim/Documents/Informatik/ipk_exercises/words.cc" "C:/Users/Tim/Documents/Informatik/ipk_exercises/build/CMakeFiles/words.dir/words.cc.obj"
+  "C:/Users/Tim/Documents/Informatik/ipk_exercises/sanitizeword.cc" "C:/Users/Tim/Documents/Informatik/ipk_exercises/build/CMakeFiles/sanitizewordLib.dir/sanitizeword.cc.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -14,7 +14,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Users/Tim/Documents/Informatik/ipk_exercises/build/CMakeFiles/sanitizewordLib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

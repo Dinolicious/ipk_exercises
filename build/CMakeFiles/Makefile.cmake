@@ -42,8 +42,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/wordsLib.dir/DependInfo.cmake"
-  "CMakeFiles/lettersLib.dir/DependInfo.cmake"
+  "CMakeFiles/sanitizewordLib.dir/DependInfo.cmake"
   "CMakeFiles/words.dir/DependInfo.cmake"
   "CMakeFiles/letters.dir/DependInfo.cmake"
   )

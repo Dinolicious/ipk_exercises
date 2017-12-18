@@ -89,7 +89,7 @@ words_EXTERNAL_OBJECTS =
 
 words.exe: CMakeFiles/words.dir/words.cc.obj
 words.exe: CMakeFiles/words.dir/build.make
-words.exe: libwordsLib.a
+words.exe: libsanitizewordLib.a
 words.exe: CMakeFiles/words.dir/linklibs.rsp
 words.exe: CMakeFiles/words.dir/objects1.rsp
 words.exe: CMakeFiles/words.dir/link.txt
