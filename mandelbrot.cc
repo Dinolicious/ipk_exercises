@@ -1,10 +1,13 @@
 #include<iostream>
-#include<string>
 #include"canvas.hh"
 
-void mandelbrot (Canvas& canvas, double threshold,int maxIt, std::string filename)
+void mandelbrot (Canvas& canvas, double threshold,int maxIt, std::string filename);
 
 
 int main{
     return 0;
+}
+
+void mandelbrot (Canvas& canvas, double threshold, int maxIT, std::sting filename){
+    
 }
