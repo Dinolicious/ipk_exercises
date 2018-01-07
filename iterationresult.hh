@@ -9,7 +9,7 @@ class IterationResult{                                                          
     int _counter;
 
     public:
-        Point lastPoint(0) const{                                                           //
+        Point lastPoint(0) const{
             return _lastPoint;
         }
         int counter() const{
