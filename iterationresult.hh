@@ -4,30 +4,25 @@
 #include<math.h>
 #include"Point.hh"
 
-class IterationResult{                                                                     //class w lastPoint and Iteration-counter
-    Point _lastPoint;
-    int _counter;
+struct IterationResult{
+    Point lastPoint;
+    int counter;
 
-    public:
-        Point lastPoint(0) const{
-            return _lastPoint;
-        }
-        int counter() const{
-            return _counter;
-        }
-        void iterate( Point, Point, double, int);
+    IterationResult(Point point, int newcounter): lastPoint(point), counter(newcounter) {}
 }
 
 void IterationResult::iterate(Point z, Point c, double threshold, int maxIt){
-    _lastPoint = z;
-    _counter = 0;
+    IterationResult output(z,0);
     
-    while (_lastPoint.length() <= threshold && _counter <= maxIt){
-        _lastPoint.x(pow(_lastPoint.x(), 2.) + pow(_lastPoint.y(), 2) + c.x());
-        _lastPoint.y(2 * _lastPoint.x() * _lastPoint.y() + c.y());
+    while (distance(z, output.lastPoint) < threshold && output.counter < maxIt){
+        Point lastPoint = output.lastPoint;
 
-        _counter++;
+        lastPoint.x(pow(lastPoint.x(), 2) - pow(lastPoint.y(), 2) + c.x(), 2* lastPoint.y(2 * lastPoint.x() * lastPoint.y() + c.y());
+
+        output.lastPoint = newPoint;
+        output.counter++;
     }
+    return output;
 }
 
 #endif
