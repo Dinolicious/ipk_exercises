@@ -3,7 +3,7 @@ project(IPK08 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_library(Lib canvas.hh point.hh pgm.cc iteration.hh)
+add_library(Lib canvas.hh point.hh pgm.cc iterationresult.hh)
 
 add_executable(mandelbrot mandelbrot.cc)
 
