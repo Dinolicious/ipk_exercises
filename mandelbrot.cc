@@ -10,6 +10,9 @@ void mandelbrot(Canvas& canvas, double threshold, int maxIt, std::string filenam
         for (int x = 0; x < canvas.horPixels(); x++){
             Point p(-2.5 + 3.5 * (x / (canvas.width() -1)), -1 + 2 * (y / (canvas.height() -1)));
             IterationResult IR = iterate(Point(0,0), p, threshold, maxIt);
+
+            if (IR.counter() >= maxIt) canvas(x, y) = 0;
+                else canvas(x, y) = log(IR.counter()) * 100;
         }
         if ( y  % (int)(canvas.vertPixels() / 100) == 0) std::cout << ".";
     }
