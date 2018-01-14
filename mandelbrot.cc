@@ -13,10 +13,10 @@ void mandelbrot(Canvas& canvas, double threshold, int maxIt, std::string filenam
         }
         if ( y  % (int)(canvas.vertPixels() / 100) == 0) std::cout << ".";
     }
-    std::cout << "Canvas written!" << std::endl;
+    std::cout << " Canvas written!" << std::endl;
 
     canvas.write(filename);
-    std::cout << filename << "written!" << std::endl;
+    std::cout << filename << " written!" << std::endl;
 }
 
 void mandelbrot(Canvas&, double, int, std::string);
@@ -26,9 +26,9 @@ int main(){
 
     double width, height;
     
-    std::cout << "Width "; 
+    std::cout << "Width: "; 
     std::cin >> width;
-    std::cout << "Height "; 
+    std::cout << "Height: "; 
     std::cin >> height;
 
     Canvas canvasMandel(Point(-1,0), width, height, width, height);
@@ -38,9 +38,9 @@ int main(){
     double threshold;
     int maxIt;
 
-    std::cout <<"Threshold "; 
+    std::cout <<"Threshold: "; 
     std::cin >> threshold;
-    std::cout <<"Maximum Iterations "; 
+    std::cout <<"Maximum Iterations: "; 
     std::cin >> maxIt;
 
     std::ostringstream mandelbrotName;
