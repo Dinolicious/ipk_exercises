@@ -1,0 +1,4 @@
+C:/Users/Tim/Documents/Informatik/ipk_exercises/build/CMakeFiles/Lib.dir
+C:/Users/Tim/Documents/Informatik/ipk_exercises/build/CMakeFiles/mandelbrot.dir
+C:/Users/Tim/Documents/Informatik/ipk_exercises/build/CMakeFiles/edit_cache.dir
+C:/Users/Tim/Documents/Informatik/ipk_exercises/build/CMakeFiles/rebuild_cache.dir
